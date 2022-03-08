@@ -41,13 +41,13 @@ namespace controlApi
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => {
-                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "controlApi v1");
-                    c.RoutePrefix = string.Empty;
+                app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("http://localhost:5000/swagger/v1/swagger.json", "controlApi v1");
                 });
             }
 
-          
+
 
             app.UseRouting();
 
